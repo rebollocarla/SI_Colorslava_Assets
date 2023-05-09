@@ -1,3 +1,1 @@
 - Spotlights que facin llum
-- timer 
-- main menu
