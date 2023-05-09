@@ -36,11 +36,11 @@ public class PlaneSquares : MonoBehaviour
             for (int z = 0; z < planeSize.z; z = z + (int)squareSize)
             {
                 // Create a new square object at the current position
-                Vector3 pos = new Vector3(x, 0.0f, z) + startPos;
+                Vector3 pos = new Vector3(x, -1.5f, z) + startPos;
                 GameObject square = Instantiate(squarePrefab, pos, Quaternion.identity);
 
                 // Set the square object's scale to the specified size
-                square.transform.localScale = new Vector3(squareSize, squareSize, squareSize);
+                square.transform.localScale = new Vector3(squareSize-1 , 0.1f, squareSize-1);
 
                 // Set the square object's parent to the grid object
                 square.transform.parent = transform;
