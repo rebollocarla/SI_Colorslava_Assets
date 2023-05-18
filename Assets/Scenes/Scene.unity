@@ -2545,6 +2545,7 @@ GameObject:
   - component: {fileID: 530153864}
   - component: {fileID: 530153867}
   - component: {fileID: 530153869}
+  - component: {fileID: 530153868}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -2644,7 +2645,7 @@ MonoBehaviour:
   squarePrefab: {fileID: 4193477226030947691, guid: bd2dc252da29d0b468c75653f42e01d6, type: 3}
   plane: {fileID: 530153862}
   squareNumber: 10
---- !u!114 &530153869
+--- !u!114 &530153868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2652,6 +2653,20 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530153862}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053718bd073a7c44a876a4f70fba5217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intervalo: 0.5
+  plane: {fileID: 530153862}
+--- !u!114 &530153869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530153862}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51f0401fc3cd15744b8aefa015c341d2, type: 3}
   m_Name: 
