@@ -1,0 +1,14 @@
+In the first lab session we tested all the advances made in our game, including:
+- The sounds and music.
+- The sizes and colors of the board.
+- The initial illumination (check if we needed extra spotlights or with the illumination of the surroundings was good)
+- How the colors changed over the time.
+- How could we phisically interact with the board (next session we will check the interactivity of the squares).
+
+From here, the next steps are: 
+- Correct the size of the board to match with the lab 
+- Interactivity of the squares with the sensors.
+- Implement different levels with changes.
+- Starting to distribute different scripts with different scenes (changing level).
+- Implement the initial scene.
+- Implement the counter.
