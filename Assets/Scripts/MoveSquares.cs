@@ -9,6 +9,9 @@ public class MoveSquares : MonoBehaviour
     // Rango máximo de la posición en el eje X y Z
     public GameObject plane;
     GameObject[] squares;
+    public Color defaultColor = Color.green; // Color por defecto de los squares
+    public Color hitColor = Color.black; // Color cuando un square es impactado por una pelota
+    private bool isTouchingSquare = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,20 @@ public class MoveSquares : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Pintar el square de cyan
+        //isTouchingSquare = true;
+        GetComponent<Renderer>().material.color = hitColor;
+    }
+
+
+    private void OnCollisionExit(Collision collision)
+    {
+        //isTouchingSquare = false;
+        GetComponent<Renderer>().material.color = defaultColor;
     }
 
     private System.Collections.IEnumerator CambiarColores()

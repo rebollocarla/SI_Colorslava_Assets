@@ -7,6 +7,7 @@ TagManager:
   - BlendPlane0
   - BlendPlane1
   - Square
+  - Collide
   layers:
   - Default
   - TransparentFX

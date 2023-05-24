@@ -94,4 +94,9 @@ public class DynamicSquares : MonoBehaviour
         // Asegurarse de establecer el color objetivo exactamente al final de la transición
         renderer.material.color = targetColor;
     }
+
+    private void OnCollistionEnter(Collision collision)
+    {
+        GetComponent<MeshRenderer>().material.color = Color.cyan;
+    }
 }
