@@ -28,7 +28,7 @@ public class PlaneSquares : MonoBehaviour
         float squareSize = planeSize.x / squareNumber;
 
         // Calculate the starting position for the grid
-        Vector3 startPos = new Vector3(squareSize / 2.0f, 0.0f, squareSize / 2.0f);
+        Vector3 startPos = new Vector3(squareSize / 2.0f, -19.9f, squareSize / 2.0f);
 
         // Create a square object for each row and column
         for (int x = 0; x < planeSize.x; x = x + (int)squareSize)
