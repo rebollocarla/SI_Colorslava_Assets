@@ -3705,7 +3705,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a6ce83e9568de043896f66e3c6249d8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b44bbc9f337a57f42b4895bd58865b4b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8549,6 +8549,7 @@ GameObject:
   - component: {fileID: 1739580390}
   - component: {fileID: 1739580389}
   - component: {fileID: 1739580393}
+  - component: {fileID: 1739580394}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Ground
@@ -8584,7 +8585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   squarePrefab: {fileID: 1191545986090380265, guid: bd2dc252da29d0b468c75653f42e01d6, type: 3}
   plane: {fileID: 1739580387}
-  squareNumber: 10
+  squareNumber: 11
 --- !u!64 &1739580390
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8655,14 +8656,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739580387}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51f0401fc3cd15744b8aefa015c341d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intervalo: 2
+  duracionRojo: 0.5
+  duracionVerde: 0.5
+  columnasPorFila: 12
+--- !u!114 &1739580394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739580387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e38e7a17f03ef45a7d198d3713ff9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   intervalo: 1
   duracionRojo: 0.5
   duracionVerde: 0.5
+  columnasPorFila: 12
 --- !u!1 &1770732473
 GameObject:
   m_ObjectHideFlags: 0

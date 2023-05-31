@@ -7,9 +7,11 @@ public class DynamicSquares : MonoBehaviour
     public float intervalo = 1f; // Intervalo de tiempo entre cambios de color
     public float duracionRojo = 0.5f; // Duración de la transición al color rojo
     public float duracionVerde = 0.5f; // Duración de la transición al color verde
+    public int columnasPorFila = 12; // Número de columnas por fila
     GameObject[] squares; // Array para almacenar los cuadrados existentes
     private Color colorBase = Color.green; // Color base verde
     private List<Renderer> rojosActivos = new List<Renderer>(); // Lista de renderers con color rojo activo
+    private int filaActual = 0; // Índice de la fila actual
 
     private void Start()
     {
@@ -30,41 +32,58 @@ public class DynamicSquares : MonoBehaviour
     {
         while (true)
         {
-            // Cambiar el color de cada cuadrado existente
-            foreach (GameObject square in squares)
+            // Calcular los índices de la primera y última columna de la fila actual
+            int primeraColumna = filaActual * columnasPorFila;
+            int ultimaColumna = primeraColumna + columnasPorFila - 1;
+
+            // Recopilar los renderizadores de la fila actual
+            List<Renderer> renderersFilaActual = new List<Renderer>();
+            for (int i = primeraColumna; i <= ultimaColumna; i++)
             {
+                GameObject square = squares[i];
                 Renderer renderer = square.GetComponent<Renderer>();
                 if (renderer != null)
                 {
-                    // Establecer el color base como verde
-                    renderer.material.color = colorBase;
-
-                    // Si el renderer está en la lista de rojos activos, no cambiar el color
-                    if (rojosActivos.Contains(renderer))
-                        continue;
-
-                    // Iniciar la transición al color rojo
-                    yield return StartCoroutine(TransicionColor(renderer, Color.red, duracionRojo));
-
-                    // Agregar el renderer a la lista de rojos activos
-                    rojosActivos.Add(renderer);
+                    renderersFilaActual.Add(renderer);
                 }
+            }
+
+            // Establecer el color base como verde si la fila anterior ha sido pintada completamente de rojo
+            if (rojosActivos.Count >= columnasPorFila)
+            {
+                foreach (Renderer rojo in rojosActivos)
+                {
+                    StartCoroutine(TransicionColor(rojo, colorBase, duracionVerde));
+                }
+                rojosActivos.Clear();
+            }
+
+            // Iniciar la transición al color rojo para toda la fila
+            foreach (Renderer renderer in renderersFilaActual)
+            {
+                StartCoroutine(TransicionColor(renderer, Color.red, duracionRojo));
+                rojosActivos.Add(renderer);
             }
 
             // Esperar un breve periodo con los colores rojos activos
             yield return new WaitForSeconds(duracionRojo);
 
-            // Desactivar los colores rojos y volver a verde
+            // Desactivar los colores rojos y volver a verde en la fila actual
             foreach (Renderer renderer in rojosActivos)
             {
                 StartCoroutine(TransicionColor(renderer, colorBase, duracionVerde));
             }
-
-            // Limpiar la lista de rojos activos
             rojosActivos.Clear();
 
-            // Esperar el intervalo de tiempo antes de cambiar los colores nuevamente
-            yield return new WaitForSeconds(intervalo);
+            // Incrementar el índice de la fila actual
+            filaActual++;
+
+            // Verificar si se ha alcanzado el final de las filas
+            if (filaActual * columnasPorFila >= squares.Length)
+            {
+                filaActual = 0; // Reiniciar el índice de la fila
+                yield return new WaitForSeconds(intervalo); // Esperar el intervalo de tiempo antes de reiniciar el ciclo
+            }
         }
     }
 
@@ -93,10 +112,5 @@ public class DynamicSquares : MonoBehaviour
 
         // Asegurarse de establecer el color objetivo exactamente al final de la transición
         renderer.material.color = targetColor;
-    }
-
-    private void OnCollistionEnter(Collision collision)
-    {
-        GetComponent<MeshRenderer>().material.color = Color.cyan;
     }
 }
