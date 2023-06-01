@@ -8662,8 +8662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intervalo: 2
-  duracionRojo: 0.5
-  duracionVerde: 0.5
+  duracionRojo: 0.3
+  duracionVerde: 0.3
   columnasPorFila: 12
 --- !u!114 &1739580394
 MonoBehaviour:
@@ -8678,8 +8678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intervalo: 1
-  duracionRojo: 0.5
-  duracionVerde: 0.5
+  duracionRojo: 0.3
+  duracionVerde: 0.3
   columnasPorFila: 12
 --- !u!1 &1770732473
 GameObject:
