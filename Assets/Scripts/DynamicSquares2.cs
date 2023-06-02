@@ -18,15 +18,15 @@ public class DynamicSquares2 : MonoBehaviour
         squares = GameObject.FindGameObjectsWithTag("Square");
         if (squares.Length > 0)
         {
-            StartCoroutine(CambiarColorIluminacion());
+            StartCoroutine(CambiarColorHorizontal());
         }
         else
         {
-            Debug.LogWarning("No se encontraron cuadrados con el tag 'Square'. Asegúrate de que los cuadrados existan y estén etiquetados correctamente.");
+            Debug.LogWarning("No se encontraron cuadrados con el tag 'Square'. Asegï¿½rate de que los cuadrados existan y estï¿½n etiquetados correctamente.");
         }
     }
 
-    private IEnumerator CambiarColorIluminacion()
+    private IEnumerator CambiarColorHorizontal()
     {
         while (true)
         {

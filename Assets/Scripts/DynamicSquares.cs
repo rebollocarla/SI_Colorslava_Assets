@@ -20,7 +20,7 @@ public class DynamicSquares : MonoBehaviour
         if (squares.Length > 0)
         {
             // Comenzar la corutina para cambiar los colores de los cuadrados
-            StartCoroutine(CambiarColorIluminacion());
+            StartCoroutine(CambiarColorVertical());
         }
         else
         {
@@ -28,7 +28,7 @@ public class DynamicSquares : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator CambiarColorIluminacion()
+    private System.Collections.IEnumerator CambiarColorVertical()
     {
         while (true)
         {
