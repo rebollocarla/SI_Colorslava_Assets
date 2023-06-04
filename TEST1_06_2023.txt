@@ -1,0 +1,15 @@
+Interactive Systems Colorslava: Intermediate advances of the project
+
+These week, we tested at the lab the following aspects:
+- We created an interactive Main menu in order to let the user choose the level they want to play jumping and staying at the text for a few seconds.
+- We created some patterns on the floor. That is, red squares appear following a vertical or horizontal line in order to be playable, not random as it was implemented before.
+
+After testing our project, we found some things to improve:
+- The interaction worked but had some precision to be fixed. Half of the space did not work, which did not make much sense as we have the same configuration in both and it works simultaneously.
+- At that moment, the blend game object was projected black on the floor. This is now fixed.
+
+Implementations for this week:
+- We want to let the floor patterns and interaction working fine.
+- We will implement the possibility to count points. When the user jumps in a green square, a point is added to their counter.
+- We will implement life loss. When pressing a red square, the user loses a life, having 3 in total.
+- We will implement the timer. Each game is going to last maximum 2 minutes (it can be less if the users have 0 lifes).
