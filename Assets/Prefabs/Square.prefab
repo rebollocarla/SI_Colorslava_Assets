@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412ce68cbc04e445baa1c5c8511e1299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counterGreen: {fileID: 0}
   redProbability: 0.3
   defaultColor: {r: 0, g: 1, b: 0, a: 1}
   hitColor: {r: 0, g: 0, b: 0, a: 1}
