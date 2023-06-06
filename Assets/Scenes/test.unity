@@ -8548,8 +8548,6 @@ GameObject:
   - component: {fileID: 1739580391}
   - component: {fileID: 1739580390}
   - component: {fileID: 1739580389}
-  - component: {fileID: 1739580393}
-  - component: {fileID: 1739580394}
   - component: {fileID: 1739580395}
   m_Layer: 0
   m_Name: Plane
@@ -8650,38 +8648,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739580387}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1739580393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739580387}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f0401fc3cd15744b8aefa015c341d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  intervalo: 2
-  duracionRojo: 0.3
-  duracionVerde: 0.3
-  columnasPorFila: 12
---- !u!114 &1739580394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739580387}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20e38e7a17f03ef45a7d198d3713ff9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  intervalo: 1
-  duracionRojo: 0.3
-  duracionVerde: 0.3
-  columnasPorFila: 12
 --- !u!114 &1739580395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8698,8 +8664,6 @@ MonoBehaviour:
   duracionRojo: 0.3
   duracionVerde: 0.3
   columnasPorFila: 12
-  squares: []
-  rojosActivos: []
 --- !u!1 &1770732473
 GameObject:
   m_ObjectHideFlags: 0
