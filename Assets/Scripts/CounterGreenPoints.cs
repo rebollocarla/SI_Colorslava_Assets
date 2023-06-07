@@ -6,29 +6,16 @@ using TMPro;
 
 public class CounterGreenPoints : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    public int score = 0;
-    public int maxScore;
+    public CounterValue counterValue;
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;
+        counterValue = GameObject.Find("CounterValue").GetComponent<CounterValue>();
         
     }
 
     public void AddScore(int newScore)
     {
-        score += newScore;
-    }
-
-    public void UpdateScore()
-    {
-        scoreText.text = "score 0" + score;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateScore();
+        counterValue.AddScore(newScore);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ColorChange : MonoBehaviour
 {
-    public CounterGreenPoints counterGreen;
+    public CounterValue counterGreen;
     public float redProbability = 0.8f; // Probabilidad de que un square sea pintado de rojo (20%)
     public Color defaultColor = Color.green; // Color por defecto de los squares
     public Color hitColor = Color.black; // Color cuando un square es impactado por una pelota
@@ -13,6 +13,8 @@ public class ColorChange : MonoBehaviour
 
     private void Start()
     {
+
+        counterGreen = GameObject.Find("CounterValue").GetComponent<CounterValue>();
         // Pintar el square de verde
         GetComponent<Renderer>().material.color = defaultColor;
 
@@ -29,9 +31,10 @@ public class ColorChange : MonoBehaviour
         //isTouchingSquare = true;
         if (GetComponent<Renderer>().material.color == Color.green)
         {
+            Debug.Log("m palabra");
             counterGreen.AddScore(1);
-        }
 
+        }
         GetComponent<Renderer>().material.color = hitColor;
     }
 
