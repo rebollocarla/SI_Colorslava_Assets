@@ -2293,8 +2293,10 @@ MonoBehaviour:
   numberOfPlayers: 2
   enableYAxis: 1
   players:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1732231397}
+  - {fileID: 1617880022}
+  - {fileID: 1906027956}
+  - {fileID: 1830287523}
   trackingInterface: {fileID: 899636817}
   scaleText: {fileID: 1287096599}
   sheerXText: {fileID: 1542555585}
@@ -6708,7 +6710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1653416315
 Transform:
   m_ObjectHideFlags: 0

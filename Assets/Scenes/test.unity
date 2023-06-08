@@ -4307,6 +4307,8 @@ MonoBehaviour:
   players:
   - {fileID: 1655285707}
   - {fileID: 648415072}
+  - {fileID: 1542934413}
+  - {fileID: 804722960}
   trackingInterface: {fileID: 844034013}
   scaleText: {fileID: 897454458}
   sheerXText: {fileID: 1794168791}
