@@ -11,11 +11,14 @@ public class CounterGreenPoints : MonoBehaviour
     void Start()
     {
         counterValue = GameObject.Find("CounterValue").GetComponent<CounterValue>();
-        
     }
 
-    public void AddScore(int newScore)
+    public void AddScorep1()
     {
-        counterValue.AddScore(newScore);
+        counterValue.AddScorep1();
+    }
+    public void AddScore2()
+    {
+        counterValue.AddScorep2();
     }
 }

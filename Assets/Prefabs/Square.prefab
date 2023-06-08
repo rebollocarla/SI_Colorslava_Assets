@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8106606748289609138}
   - component: {fileID: 1925772580392344724}
   - component: {fileID: 2239808074461356158}
-  - component: {fileID: 3948547850216763803}
   m_Layer: 0
   m_Name: Square
   m_TagString: Square
@@ -109,24 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412ce68cbc04e445baa1c5c8511e1299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counterGreen: {fileID: 0}
-  counterLives1: {fileID: 0}
-  counterLives2: {fileID: 0}
-  player1: {fileID: 0}
-  player2: {fileID: 0}
   redProbability: 0.3
-  defaultColor: {r: 0, g: 1, b: 0, a: 1}
-  hitColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!114 &3948547850216763803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191545986090380265}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481b135304642104ebc32a5fbd83480b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counterValue: {fileID: 0}

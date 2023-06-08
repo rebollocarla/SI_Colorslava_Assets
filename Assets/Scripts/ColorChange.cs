@@ -5,26 +5,25 @@ using UnityEngine;
 
 public class ColorChange : MonoBehaviour
 {
-    public CounterValue counterGreen1;
-    public CounterValue counterGreen2;
-    public TimerLives counterLives1;
-    public TimerLives counterLives2;
-    public GameObject player1;
-    public GameObject player2;
+    private CounterValue counterGreen1;
+    private CounterValue counterGreen2;
+    private TimerLives counterLives1;
+    private TimerLives counterLives2;
+    private GameObject player1;
+    private GameObject player2;
 
     public float redProbability = 0.8f; // Probabilidad de que un square sea pintado de rojo (20%)
-    public Color defaultColor = Color.green; // Color por defecto de los squares
-    public Color hitColor = Color.black; // Color cuando un square es impactado por una pelota
-    //private bool isTouchingSquare = false; // Indica si la pelota está en contacto con un square
 
     private void Start()
     {
-
         counterGreen1 = GameObject.Find("CounterValue").GetComponent<CounterValue>();
         counterGreen2 = GameObject.Find("CounterValue").GetComponent<CounterValue>();
-        // Pintar el square de verde
-        GetComponent<Renderer>().material.color = defaultColor;
+        counterLives1 = GameObject.Find("TimerLives").GetComponent<TimerLives>();
+        counterLives2 = GameObject.Find("TimerLives").GetComponent<TimerLives>();
+        player1 = GameObject.Find("Player1");
+        player2 = GameObject.Find("Player2");
 
+        GetComponent<Renderer>().material.color = Color.green;
         // Verificar si el square debe ser pintado de rojo
         if (Random.value <= redProbability)
         {
@@ -34,40 +33,35 @@ public class ColorChange : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Pintar el square de cyan
-        //isTouchingSquare = true;
+        //colorOriginal = renderer.material.color;
         if (GetComponent<Renderer>().material.color == Color.green)
         {
             if (collision.gameObject == player1)
             {
-                counterGreen1.AddScore(1);
+                counterGreen1.AddScorep1();
             }
             else if (collision.gameObject == player2)
             {
-                counterGreen2.AddScore(1);
+                counterGreen2.AddScorep2();
             }
-        }
-
-        if (GetComponent<Renderer>().material.color == Color.red)
+        } 
+        else if (GetComponent<Renderer>().material.color == Color.red)
         {
             if (collision.gameObject == player1)
             {
-                counterLives1.SubstractScorep1(1);
+                counterLives1.SubstractLifep1();
             }
             else if (collision.gameObject == player2)
             {
-                counterLives2.SubstractScorep2(1);
+                counterLives2.SubstractLifep2();
             }
-
         }
-        GetComponent<Renderer>().material.color = hitColor;
+        GetComponent<Renderer>().material.color = Color.black;
     }
-
 
     private void OnCollisionExit(Collision collision)
     {
-        //isTouchingSquare = false;
-        GetComponent<Renderer>().material.color = defaultColor;
+        GetComponent<Renderer>().material.color = Color.green; // cambiar
     }
 
 }
