@@ -11,7 +11,6 @@ public class FloorPattern : MonoBehaviour
     public int columnasPorFila = 12; // Número de columnas por fila
     GameObject[] squares; // Array para almacenar los cuadrados existentes
     private List<Renderer> rojosActivos = new List<Renderer>(); // Lista de renderers con color rojo activo
-    private int filaActual = 0; // Índice de la fila actual
 
     private void Start()
     {

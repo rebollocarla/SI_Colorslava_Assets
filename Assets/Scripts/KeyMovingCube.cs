@@ -5,7 +5,6 @@ public class KeyMovingCube : MonoBehaviour
     private Rigidbody rb;
     public float speed = 100f;
     public float jumpForce = 10f;
-    private bool isJumping = false;
 
     private void Start()
     {
