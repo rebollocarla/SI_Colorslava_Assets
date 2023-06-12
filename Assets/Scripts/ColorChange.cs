@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class ColorChange : MonoBehaviour
@@ -11,6 +12,10 @@ public class ColorChange : MonoBehaviour
     private TimerLives counterLives2;
     private GameObject player1;
     private GameObject player2;
+
+    private int endLives1;
+    private int endLives2;
+    public string sceneName;
 
     public float redProbability = 0.8f; // Probabilidad de que un square sea pintado de rojo (20%)
 
@@ -50,13 +55,21 @@ public class ColorChange : MonoBehaviour
             if (collision.gameObject == player1)
             {
                 counterLives1.SubstractLifep1();
+                endLives1+= 1;
             }
             else if (collision.gameObject == player2)
             {
                 counterLives2.SubstractLifep2();
+                endLives2+= 1;
+
             }
         }
         GetComponent<Renderer>().material.color = Color.black;
+        if (endLives1 == 3 || endLives2 == 3)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
     }
 
     private void OnCollisionExit(Collision collision)

@@ -108,4 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412ce68cbc04e445baa1c5c8511e1299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: EndGame
   redProbability: 0.3
