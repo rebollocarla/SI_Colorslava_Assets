@@ -3560,7 +3560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 252, y: 352}
+  m_AnchoredPosition: {x: 288, y: 352}
   m_SizeDelta: {x: 247.0403, y: 79.746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &733781427
@@ -5512,8 +5512,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967289
-  m_fontColor: {r: 0.9764151, g: 1, b: 0.9992698, a: 1}
+    rgba: 4288937728
+  m_fontColor: {r: 0, g: 1, b: 0.6392157, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6829,7 +6829,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168650997}
-  - component: {fileID: 1168650998}
   m_Layer: 0
   m_Name: Players
   m_TagString: Untagged
@@ -6855,18 +6854,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1168650998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168650996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481b135304642104ebc32a5fbd83480b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1186488059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6911,7 +6898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186488059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb989186feb8643908f4bed883def07e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7448e3424ffb24b278fbd8dbc42766b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   intervalo: 1

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 418176674310723640}
   m_Layer: 0
   m_Name: SquareTimer
-  m_TagString: Square
+  m_TagString: SquareTimer2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,5 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fc01f63f13440a1acde3305e952fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counter_total: {fileID: 0}
   sceneName: EndGame
   redProbability: 0.3
