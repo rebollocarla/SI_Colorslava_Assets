@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class ColorChange : MonoBehaviour
+public class ColorChangeTimer : MonoBehaviour
 {
-    private CounterValue counterGreen1;
-    private CounterValue counterGreen2;
-    private TimerLives counterLives1;
-    private TimerLives counterLives2;
+    [SerializeField] private TimerLivesmode2 counter_total;
     private GameObject player1;
     private GameObject player2;
     public string sceneName;
@@ -18,10 +14,7 @@ public class ColorChange : MonoBehaviour
 
     private void Start()
     {
-        counterGreen1 = GameObject.Find("CounterValue").GetComponent<CounterValue>();
-        counterGreen2 = GameObject.Find("CounterValue").GetComponent<CounterValue>();
-        counterLives1 = GameObject.Find("TimerLives").GetComponent<TimerLives>();
-        counterLives2 = GameObject.Find("TimerLives").GetComponent<TimerLives>();
+        counter_total = GameObject.Find("TimerLives2").GetComponent<TimerLivesmode2>();
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
 
@@ -36,28 +29,19 @@ public class ColorChange : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //colorOriginal = renderer.material.color;
-        if (GetComponent<Renderer>().material.color == Color.green)
+        
+        if (GetComponent<Renderer>().material.color == Color.red)
         {
             if (collision.gameObject == player1)
             {
-                counterGreen1.AddScorep1();
+                counter_total.SubstractLife();
             }
-            else if (collision.gameObject == player2)
+            if (collision.gameObject == player2)
             {
-                counterGreen2.AddScorep2();
-            }
-        } 
-        else if (GetComponent<Renderer>().material.color == Color.red)
-        {
-            if (collision.gameObject == player1)
-            {
-                counterLives1.SubstractLifep1();
-            }
-            else if (collision.gameObject == player2)
-            {
-                counterLives2.SubstractLifep2();
+                counter_total.SubstractLife();
             }
         }
+
         GetComponent<Renderer>().material.color = Color.black;
     }
 
@@ -67,5 +51,6 @@ public class ColorChange : MonoBehaviour
     }
 
 }
+
 
 

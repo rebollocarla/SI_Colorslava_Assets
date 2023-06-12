@@ -29,12 +29,12 @@ public class CounterValue : MonoBehaviour
 
     public void UpdateScorep1()
     {
-        scoreText1.text = "score1: " + score1.ToString();
+        scoreText1.text = "Score 1: " + score1.ToString();
     }
 
     public void UpdateScorep2()
     {
-        scoreText2.text = "score2: " + score2.ToString();
+        scoreText2.text = "Score 2: " + score2.ToString();
     }
 
 

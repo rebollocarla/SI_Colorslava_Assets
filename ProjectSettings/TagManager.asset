@@ -9,6 +9,7 @@ TagManager:
   - Square
   - Collide
   - Ground
+  - SquareTimer
   layers:
   - Default
   - TransparentFX

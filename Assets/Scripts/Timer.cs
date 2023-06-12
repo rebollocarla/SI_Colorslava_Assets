@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public float timer = 120;
+    private float timer = 120;
     public TMP_Text textoTimer;
     // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
         textoTimer.text = "Time: " + timer.ToString("f0");
+        if (textoTimer.text == "Time: 0"){
+            SceneManager.LoadScene("EndGame");
+        }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimerLives : MonoBehaviour
 {
@@ -23,22 +24,30 @@ public class TimerLives : MonoBehaviour
     {
         lives1 -= 1;
         audioError.Play();
+        if (lives1 == 0)
+        {
+            SceneManager.LoadScene("EndGame");
+        }
     }
 
     public void SubstractLifep2()
     {
         lives2 -= 1;
         audioError.Play();
+        if (lives2 == 0)
+        {
+            SceneManager.LoadScene("EndGame");
+        }
     }
 
     public void UpdateLifep1()
     {
-        scoreTextp1.text = "lives1: " + lives1.ToString();
+        scoreTextp1.text = "Lives 1: " + lives1.ToString();
     }
 
     public void UpdateLifep2()
     {
-        scoreTextp2.text = "lives2: " + lives2.ToString();
+        scoreTextp2.text = "Lives 2: " + lives2.ToString();
     }
 
     // Update is called once per frame
