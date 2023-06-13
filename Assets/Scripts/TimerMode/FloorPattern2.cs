@@ -34,7 +34,6 @@ public class FloorPattern2 : MonoBehaviour
         {
             if(executed == false){
                 // Comenzar la corutina para cambiar los colores de los cuadrados en el plano
-                Debug.Log("patata");
                 StartCoroutine(RealizarCambios());
                 executed = true;
             }
