@@ -11,6 +11,7 @@ public class FloorPattern2 : MonoBehaviour
     public int columnasPorFila = 12; // Número de columnas por fila
     GameObject[] squares; // Array para almacenar los cuadrados existentes
     private List<Renderer> rojosActivos = new List<Renderer>(); // Lista de renderers con color rojo activo
+    private bool executed = false;
 
     private void Awake()
     {
@@ -20,6 +21,23 @@ public class FloorPattern2 : MonoBehaviour
         {
             // Comenzar la corutina para cambiar los colores de los cuadrados en el plano
             StartCoroutine(RealizarCambios());
+        }
+        else
+        {
+            Debug.LogWarning("No se encontraron cuadrados con el tag 'Square'. Asegúrate de que los cuadrados existan y estén etiquetados correctamente.");
+        }
+    }
+
+    private void Update(){
+        squares = GameObject.FindGameObjectsWithTag("SquareTimer");
+        if (squares.Length > 0)
+        {
+            if(executed == false){
+                // Comenzar la corutina para cambiar los colores de los cuadrados en el plano
+                Debug.Log("patata");
+                StartCoroutine(RealizarCambios());
+                executed = true;
+            }
         }
         else
         {
